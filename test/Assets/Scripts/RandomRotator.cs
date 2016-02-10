@@ -4,8 +4,8 @@ using System.Collections;
 public class RandomRotator : MonoBehaviour
 {
 	public float tumble;
-	public Rigidbody rb;
-	
+	private Rigidbody rb;
+
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
