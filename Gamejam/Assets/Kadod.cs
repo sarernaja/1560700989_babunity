@@ -30,6 +30,11 @@ public class Kadod : MonoBehaviour {
 			Button.SetActive(true);
 		}
 	}
+	void OnCollisionExit(Collision collision) {
+		if (collision.gameObject.tag == "cyl") {
+			rb.velocity = new Vector3 (0,rb.velocity.y,0);
+		}
+	}
 
 
 

@@ -3,16 +3,21 @@ using System.Collections;
 
 public class Mover : MonoBehaviour
 {
-	public float speed;
+	public float speedX = 0;
+	public float speedY = 1;
+	public float speedZ = 0;
 	public Rigidbody rb;
-	void OnCollisionEnter(Collision collision)
+	void Start ()
 	{
-		if (collision.gameObject.tag == "cly") {
-			rb = GetComponent<Rigidbody> ();
-			rb.velocity = transform.forward * speed;
-		}
-		
 	}
-	
-	
+	void Update ()
+	{
+		rb = GetComponent<Rigidbody>();
+		rb.transform.Translate (new Vector3 (speedX, speedY, speedZ) * Time.deltaTime);
+	}
+	void OnCollisionEnter(Collision collision) {
+		if(collision.gameObject.tag == "ceil"){
+			Destroy (this.gameObject);
+		}
+	}
 }﻿
