@@ -70,6 +70,7 @@
 -define:UNITY_EDITOR_OSX
 'Assets/Kadod.cs'
 'Assets/Mover.cs'
+'Assets/Score.cs'
 'Assets/canvas.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

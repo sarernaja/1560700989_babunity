@@ -7,6 +7,7 @@ public class canvas : MonoBehaviour {
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+	
 	// Use this for initialization
 	void Start () {
 		Debug.Log("hit");
@@ -24,7 +25,8 @@ public class canvas : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
-				Vector3 spawnPosition = new Vector3 (4,0,0);
+				float random = Random.Range(max: 3.6f,min:-2.3f);
+				Vector3 spawnPosition = new Vector3 (4,random,0);
 				Quaternion spawnRotation = Quaternion.identity;
 				GameObject hazardshoot = (GameObject)Instantiate (hazard, spawnPosition, spawnRotation);
 				hazardshoot.transform.Rotate(new Vector3(0,0,1),90);
