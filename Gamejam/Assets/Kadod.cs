@@ -45,6 +45,10 @@ public class Kadod : MonoBehaviour {
 			score = score + 1;
 			scoreText.text = "score : " + score.ToString();
 		}
+		else if (other.gameObject.CompareTag ("score-1")) {
+			score-;
+			scoreText.text = "score : " + score.ToString ();
+		}
 	}
 
 
