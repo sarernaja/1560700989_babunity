@@ -25,10 +25,10 @@ public class canvas : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
-				Vector3 spawnPosition = new Vector3 (0,0,0);
+				Vector3 spawnPosition = new Vector3 (4,-1,0);
 				Quaternion spawnRotation = Quaternion.identity;
 				GameObject hazardshoot = (GameObject)Instantiate (hazard, spawnPosition, spawnRotation);
-				hazardshoot.transform.Rotate(new Vector3(1,0,0),90);
+				hazardshoot.transform.Rotate(new Vector3(0,0,0),90);
 				yield return new WaitForSeconds (spawnWait);
 			}
 			yield return new WaitForSeconds (waveWait);
