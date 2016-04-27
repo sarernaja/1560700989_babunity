@@ -8,8 +8,7 @@ public class Game : MonoBehaviour {
 	public GameObject Scrollbar;
 	public GameObject Button;
 	public GameObject Button1;
-
-	private int count;
+	
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -31,6 +30,10 @@ public class Game : MonoBehaviour {
 			Scrollbar.SetActive(true);
 			Button.SetActive (true);
 			Button1.SetActive (true);
+		}
+		if (collision.gameObject.tag == "Point") {
+			Instantiate(PlayerDeadPrefab,this.gameObject.transform.position,Quaternion.identity);
+			Destroy (this.gameObject);
 		}
 			
 	}

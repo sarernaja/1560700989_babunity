@@ -3,10 +3,8 @@ using System.Collections;
 
 public class menu : MonoBehaviour {
 
-	IEnumerator OnMouseDown()
+	public void OnMouseDown()
 	{
-		yield return new WaitForSeconds (1f);
-		Debug.Log ("isClick");
 		Application.LoadLevel(1);
 	}
 	// Use this for initialization
