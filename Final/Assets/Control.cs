@@ -14,11 +14,14 @@ public class Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+			float moverVertical = Input.GetAxis("Vertical");
 
+			Vector3 movement = new Vector3(moveHorizontal,0.0f,moverVertical);
+		rb.AddForce (movement);
 	
 	}
-	void OnCollisionEnter(Collision collision) {
 
-	}
+
 
 }

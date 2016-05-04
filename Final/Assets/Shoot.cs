@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class Shoot : MonoBehaviour {
-
+	private Rigidbody rb;
 	public GameObject bullet;
 	public GameObject button;
 	// Use this for initialization
 	void Start () {
-	
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

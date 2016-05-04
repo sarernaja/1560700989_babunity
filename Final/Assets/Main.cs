@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class menu : MonoBehaviour {
+public class Main : MonoBehaviour {
 
 	public void OnMouseDown()
 	{
-		Application.LoadLevel(1);
+		Application.LoadLevel(0);
 	}
 	// Use this for initialization
 	void Start () {
